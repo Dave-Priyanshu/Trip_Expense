@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:trip_expense/models/Trip.dart';
 import 'budget_view.dart';
+import 'package:flutter_date_pickers/flutter_date_pickers.dart' as dp;
 
 class NewTriDateView extends StatelessWidget{
   final Trip trip;
@@ -27,8 +28,8 @@ class NewTriDateView extends StatelessWidget{
             ElevatedButton (
                 child:Text("Continue"),
                 onPressed: (){
-                  trip.startDate= DateTime.now();
-                  trip.endDate= DateTime.now();
+                  trip.startDate= DateTime.now() as int;
+                  trip.endDate= DateTime.now() as int;
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context)=> NewTripBudgetView(trip:trip)),
