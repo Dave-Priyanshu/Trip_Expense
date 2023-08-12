@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'Trip.dart';
+import '../models/Trip.dart';
 import 'package:intl/intl.dart';
 class HomeView extends StatelessWidget{
   final List<Trip> tripsList=[

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:trip_expense/pages.dart';
-import 'home_view.dart';
+import 'package:trip_expense/views/new_trips/location_view.dart';
+import 'views/home_view.dart';
+import 'package:trip_expense/views/new_trips/location_view.dart';
+import 'package:trip_expense/models/Trip.dart';
 
 class Home extends StatefulWidget{
   //top and bottm navigations and page main display
@@ -21,9 +24,21 @@ class _HomeState extends State<Home>{
 
   @override
   Widget build(BuildContext context) {
+    final newTrip = Trip("some trip", DateTime.now(), DateTime.now(), 0.0, "some location");
+
     return Scaffold(
       appBar: AppBar(
         title: Text("Trip Expense Manager"),
+        actions: <Widget>[
+          IconButton(
+              icon: Icon(Icons.add),
+              onPressed: (){
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => NewTripLocationView(trip: newTrip,)),
+                );
+              },
+          )
+        ],
       ),
       body: _children[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
