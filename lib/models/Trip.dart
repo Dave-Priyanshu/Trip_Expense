@@ -1,7 +1,7 @@
 class Trip{
    String title;
-   int startDate;
-   int endDate;
+   DateTime startDate;
+   DateTime endDate;
    double budget;
    String travelType;
 

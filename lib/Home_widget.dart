@@ -40,7 +40,7 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    final newTrip = Trip("some trip", DateTime.now().millisecondsSinceEpoch, DateTime.now().millisecondsSinceEpoch, 0.0, "some location");
+    final newTrip = Trip("some trip", DateTime.now(), DateTime.now(), 0.0, "some location");
 
     return Scaffold(
       appBar: AppBar(

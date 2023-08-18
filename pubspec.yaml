@@ -19,7 +19,8 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.19.6 <3.0.0"
+  sdk: ">=2.17.0 <3.0.0"
+
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -31,19 +32,17 @@ dependencies:
   flutter:
     sdk: flutter
 
-
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   intl: ^0.17.0-nullsafety.2
+  calendar_date_picker2: ^0.5.2
   firebase_core: ^2.14.0
   firebase_auth: ^4.6.3
   firebase_analytics: ^10.4.3
   firebase_database: ^10.2.3
   firebase_sign_in: ^0.0.16
   google_sign_in: ^6.1.4
-
-
   english_words: ^4.0.0
 
 dev_dependencies:
@@ -96,4 +95,5 @@ flutter:
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #
-  # For details regarding fonts from package
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages

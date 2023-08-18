@@ -3,11 +3,11 @@ import '../models/Trip.dart';
 import 'package:intl/intl.dart';
 class HomeView extends StatelessWidget{
   final List<Trip> tripsList=[
-    Trip("New York", DateTime.now(), DateTime.now(), 2000, "car"),
-    Trip("Boston", DateTime.now(), DateTime.now(), 3000, "plane"),
-    Trip("Jaipur", DateTime.now(), DateTime.now(), 4000, "bike"),
-    Trip("Dubai", DateTime.now(), DateTime.now(), 5000, "plane"),
-    Trip("Ahmedabad", DateTime.now(), DateTime.now(), 6000, "car"),
+    Trip("New York", DateTime.now() , DateTime.now(), 2000, "car"),
+    Trip("Boston", DateTime.now() , DateTime.now() , 3000, "plane"),
+    Trip("Jaipur", DateTime.now() , DateTime.now() , 4000, "bike"),
+    Trip("Dubai", DateTime.now() , DateTime.now() , 5000, "plane"),
+    Trip("Ahmedabad", DateTime.now(), DateTime.now() , 6000, "car"),
 
   ];
   @override
@@ -44,7 +44,7 @@ class HomeView extends StatelessWidget{
                   padding: const EdgeInsets.only(top:4.0, bottom: 80),
                   child: Row(
                       children:<Widget>[
-                    Text("${DateFormat('dd/MM/yyyy').format(trip.startDate).toString()} -${DateFormat('dd/MM/yyyy').format(trip.endDate).toString()}"),
+                    Text("${DateFormat('dd/MM/yyyy').format(trip.startDate as DateTime).toString()} -${DateFormat('dd/MM/yyyy').format(trip.endDate as DateTime).toString()}"),
                         Spacer(),
                     ]
                   ),

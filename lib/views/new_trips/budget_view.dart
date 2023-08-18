@@ -12,8 +12,9 @@ class NewTripBudgetView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Convert timestamps to DateTime objects
-    DateTime startDate = DateTime.fromMillisecondsSinceEpoch(trip.startDate);
-    DateTime endDate = DateTime.fromMillisecondsSinceEpoch(trip.endDate);
+    DateTime startDate = trip.startDate;
+    DateTime endDate = trip.endDate;
+
 
     // Format dates as "month/day/year"
     String formattedStartDate = DateFormat('MM/dd/yyyy').format(startDate);
